@@ -8,7 +8,7 @@ const moment= require('moment');
       })
     })
 
-    // CREATE-GET
+    // Get-New
     app.get('/events/new', (req, res) => {
         res.render('events-new', {});
     })
@@ -26,7 +26,8 @@ const moment= require('moment');
     // SHOW
     app.get('/events/:id', (req, res) => {
       // Search for the event by its id that was passed in via req.params
-      models.Event.findByPk(req.params.id, { include: [{ model: models.Rsvp }] }).then((event) => {
+      // { include: [{ model: models.Rsvp }] }
+      models.Event.findByPk(req.params.id).then((event) => {
         // If the id is for a valid event, show it
         let createdAt = event.createdAt;
         createdAt = moment(createdAt).format('MMMM Do YYYY, h:mm:ss a');

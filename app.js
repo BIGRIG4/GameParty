@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // override with POST having ?_method=DELETE or ?_method=PUT
 app.use(methodOverride('_method'))
 
-const models = require('./db/models');
+const models = require('./models');
 require('./controllers/events')(app, models);
 
 // Use "main" as our default layout
