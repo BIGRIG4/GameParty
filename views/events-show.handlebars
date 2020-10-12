@@ -1,12 +1,34 @@
 <!-- views/events-show.handlebars -->
 
 <div class="row mt-4">
-  <div class="col-lg-6 offset-lg-3">
+  <div class="col-lg-6">
     <img class="img-fluid w-100 rounded mb-3" src="{{event.imgUrl}}" alt="Card image cap">
+    <small class="text-muted">Created on: {{event.createdAtFormatted}}</small>
     <h3>{{event.title}}</h3>
     <div class="lead">{{event.desc}}</div>
     <div class="text-right">
       <a href="/events/{{event.id}}/edit">Edit</a>
     </div>
   </div>
+  <div class="col-lg-4 offset-lg-1">
+    <div class="d-flex justify-content-between">
+        <b>RSVPs ({{event.Rsvps.length}})</b>
+        <a href="/events/{{event.id}}/rsvps/new" class="btn btn-primary btn-sm">RSVP</a>
+    </div>
+
+    <div class="list-group mt-4">
+      {{#each event.Rsvps}}
+        <div class="list-group-item clearfix">
+          <div class="float-left">
+            {{this.name}}
+          </div>
+          <div class="float-right">
+            <form class="form-inline" action="/events/{{../event.id}}/rsvps/{{this.id}}?_method=DELETE" method="post">
+              <button type="submit" class="btn btn-link btn-sm">Remove</button>
+            </form>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+</div>
 </div>

@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
 
   Event.associate = function(models) {
-    // associations can be defined here
+   Event.hasMany(models.Rsvp);
   };
 
   return Event;
