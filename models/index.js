@@ -1,8 +1,5 @@
 'use strict';
 
-// const Handlebars = require('handlebars');
-// const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access');
-// const exphbs =  require('express-handlebars');
 const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
@@ -17,14 +14,6 @@ if (config.use_env_variable) {
 } else {
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
-
-sequelize.authenticate()
- .then(() => {
-   console.log('Connection has been established successfully.');
- })
- .catch(err => {
-   console.error('Unable to connect to the database:', err);
- });
 
 fs
   .readdirSync(__dirname)
