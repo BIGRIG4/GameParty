@@ -6,7 +6,7 @@
         <div class="card">
             <div class="card-body">
                 <div class="card-title">
-                    <h3>Thank you, Donate below</h3>
+                    <h3>Welcome To The Party</h3>
                     <div class="lead">
                         Event: {{event.title}}
                     </div>
@@ -14,12 +14,20 @@
                 <div class="card-text">
                     <form action="/events/{{event.id}}/rsvps" method="post">
                         <div class="form-group">
-                            <label for="title">Name</label>
-                            <input name="name" class="form-control" placeholder="ex.)Nick Becker" />
+                            <label for="title">UserName</label>
+                            <input name="name" class="form-control" placeholder="ex.)BigRig42" />
                         </div>
                         <div class="form-group">
-                            <label for="title">Amount Of Money</label>
-                            <input name="email" class="form-control" placeholder="$0" />
+                            <label for="title">What Console do you play on?</label>
+                            <input name="email" class="form-control" placeholder="Xbox? Playstation? PC?" />
+                        </div>
+                        <div class="form-group">
+                            <label for="title">Mic or no Mic</label>
+                            <input name="email" class="form-control" placeholder="if no mic put N/A" />
+                        </div>
+                        <div class="form-group">
+                            <label for="title">Why you like the game?</label>
+                            <input name="email" class="form-control" placeholder="The game looks real" />
                         </div>
                         <div class="text-right">
                             <a href="/" class='text-muted mr-2'>Cancel</a>

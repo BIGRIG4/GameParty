@@ -1,18 +1,18 @@
 <!-- events-index -->
  <div class="row mt-4">
-     <div class="col-lg-6 offset-lg-3">
-       <h1>Current Donation Events</h1>
+     <div class="col-lg-9 offset-lg-2">
+       <h5>👇🏻🤖Create a gaming event below</h5>
        <a href="/events/new">Create an event</a>
-         <h1>Donate Today💰❤️</h1>
+         <h1>Current Gaming Events</h1>
          {{#each events}}
-          <div class="card mt-3">
+          <div class="card mt-5">
             <img class="card-img-top" src="{{this.imgUrl}}" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title">{{this.title}}</h5>
                 <p class="card-text">{{this.description}}</p>
                 <div class="text-right">
-                  <a href="/events/{{this.id}}/rsvps/new" class="btn btn-info">Become A New Donator</a>
-                  <a href="/events/{{this.id}}" class="btn btn-primary">Who Has Donated</a>
+                  <a href="/events/{{this.id}}/rsvps/new" class="btn btn-info">Join The Party Here</a>
+                  <a href="/events/{{this.id}}" class="btn btn-primary">Current Gamers</a>
                 </div>
               </div>
             </div>
