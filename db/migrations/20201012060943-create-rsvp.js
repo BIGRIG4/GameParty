@@ -11,7 +11,13 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
-      email: {
+      console: {
+        type: Sequelize.STRING
+      },
+      hasMic: {
+        type: Sequelize.BOOLEAN
+      },
+      iceBreaker: {
         type: Sequelize.STRING
       },
       createdAt: {

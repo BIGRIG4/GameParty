@@ -17,7 +17,9 @@ module.exports = (sequelize, DataTypes) => {
   };
   Rsvp.init({
     name: DataTypes.STRING,
-    email: DataTypes.STRING
+    console:DataTypes.STRING,
+    hasMic:DataTypes.BOOLEAN,
+    iceBreaker:DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Rsvp',
