@@ -70,3 +70,4 @@ app.get('/sign-up', (req, res) => {
           //req.session.sessionFlash = { type: 'success', message: 'Successfully logged out!' }
           return res.redirect('/');
         });
+}

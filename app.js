@@ -43,7 +43,7 @@ var events = [
 ]
 
 
-
+require('./controllers/auth')(app, models);
 require('./controllers/events')(app, models);
 require('./controllers/rsvps')(app, models);
 // Choose a port to listen on
